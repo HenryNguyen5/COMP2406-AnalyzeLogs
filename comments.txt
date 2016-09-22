@@ -1,0 +1,12 @@
+/*Assignment 5*/
+/*analyzeLogs.js*/
+/*Student Number: 100968253*/
+/*Name: Henry Nguyen*/
+
+/*References:*/
+/*https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase*/
+/*http://stackoverflow.com/questions/8293363/passing-an-array-to-a-json-object-for-jade-rendering*/
+/*http://stackoverflow.com/questions/17039018/how-to-use-a-variable-as-a-field-name-in-mongodb-native-findone*/
+
+/*Collaborators:*/
+/*Mike Smith*/

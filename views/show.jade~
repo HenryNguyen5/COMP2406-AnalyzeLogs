@@ -1,0 +1,26 @@
+extends layout
+
+block content
+  h1= title
+  
+  //script for generating the scroll function
+  script.
+   $( "#target" ).scroll(function() {});
+   
+  //inside the scroll box, parse through the object of logs, and print out each log
+  div#target(style="overflow: scroll; width: Window.innerWidth; height: 400px;")
+   each log in logs
+    ul
+    each info in Object.keys(log)
+      unless info == "_id" || info == "file"
+        if info == "service"
+          |#{log[info]+':'}
+        else if info == "message"
+          |#{log[info]}
+        else
+          |#{log[info]+ ' '}
+  br
+  //add in a back button to return to home
+  form(method=get, action='/')
+    button(type=submit) Back
+    

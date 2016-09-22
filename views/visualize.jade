@@ -1,0 +1,30 @@
+extends layout
+
+block header
+  script(src="javascripts/jquery-1.12.1.js")
+  script(src="javascripts/Chart.js")
+
+block content
+  center
+   h1= title
+
+
+  center
+    canvas(id="myChart", width="600", height="600")
+  script!= theData
+  script.
+    var ctx = $("#myChart").get(0).getContext("2d");
+    var myBarChart = new Chart(ctx).Bar(data, {});
+    
+   
+  center
+    h2 Query Submitted
+  //parse through each query asked and print them out
+  each info in Object.keys(theQuery)
+    unless info == "QueryType"
+        |#{ info +':' +theQuery[info]}
+        br
+  //button for going back home
+  br
+  form(method = get, action = '/')
+    button(type=submit) Home
